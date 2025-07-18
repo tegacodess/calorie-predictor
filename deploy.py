@@ -23,8 +23,8 @@ duration = st.slider("Duration (mins)", 1, 180, 30)
 heart_rate = st.slider("Heart Rate (bpm)", 40, 200, 80)
 body_temp = st.slider("Body Temperature (°C)", 35.0, 42.0, 37.0)
 bmi = weight / ((height / 100) ** 2)
-bmi_category = 'Normal' if 18.5 <= bmi < 24.9 else 'Overweight' if bmi >= 25 else 'Underweight'
-age_groups = 'Child' if age < 12 else 'Adolescence' if age < 19 else 'Adult' if age < 60 else 'Senior Adult'
+bmi_category ='Underweight' if bmi <= 18.5 else 'Normal Weight' if bmi <= 24.9 else 'Overweight' if bmi <= 30 else 'Obese'
+age_groups = 'Child' if age <= 12 else 'Adolescence' if age <= 18 else 'Adult' if age <= 59 else 'Senior Adult'
 
 
 # predict button
